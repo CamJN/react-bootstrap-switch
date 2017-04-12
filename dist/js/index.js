@@ -356,7 +356,6 @@ var Switch = function (_React$Component) {
 
       var wrapperParams = {
         className: this._wrapperClasses(),
-        style: { width: wrapperWidth },
         tabIndex: "0",
         onKeyDown: this._handleKeyPress.bind(this),
         onFocus: this._setFocus.bind(this),
@@ -365,7 +364,6 @@ var Switch = function (_React$Component) {
 
       var containerParams = {
         className: baseClass + '-container',
-        style: { width: containerWidth, marginLeft: offset }
       };
 
       return _react2.default.createElement(
@@ -396,7 +394,6 @@ var Switch = function (_React$Component) {
         ref: function ref(e) {
           return _this7.elmOnHandle = e;
         },
-        style: { width: handleWidth },
         className: baseClass + '-handle-on ' + baseClass + '-' + onColor,
         onClick: this._handleOnClick.bind(this)
       };
@@ -423,7 +420,6 @@ var Switch = function (_React$Component) {
         ref: function ref(e) {
           return _this8.elmOffHandle = e;
         },
-        style: { width: handleWidth },
         className: baseClass + '-handle-off ' + baseClass + '-' + offColor,
         onClick: this._handleOffClick.bind(this)
       };
@@ -449,7 +445,6 @@ var Switch = function (_React$Component) {
         ref: function ref(e) {
           return _this9.elmLabel = e;
         },
-        style: { width: labelWidth },
         className: baseClass + '-label',
 
         onTouchStart: this._handleLabelMouseDown.bind(this),
@@ -463,7 +458,7 @@ var Switch = function (_React$Component) {
       };
 
       return _react2.default.createElement(
-        'span',
+        'label',
         params,
         labelText
       );
